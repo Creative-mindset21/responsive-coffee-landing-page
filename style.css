@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-  max-width: 1700px;
+  max-width: 1600px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -44,10 +44,12 @@ button {
   /** TYPOGRAPHY */
 
   /*! FONT SIZE */
-  --fs-s: 0.8rem;
+  --fs-s: 0.9rem;
   --fs-n: 1rem;
-  --fs-l: 1.2rem;
+  --fs-m: 1.12rem;
+  --fs-l: 1.5rem;
   --fs-xl: 2rem;
+  --fs-xll: 2.3rem;
 
   /*! FONT WEIGHT */
   --fw-light: 400;
@@ -61,6 +63,9 @@ button {
 header {
   background: var(--bg-color);
   padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
 }
 
 .header {
@@ -96,7 +101,7 @@ nav ul {
 }
 
 nav ul li {
-  font-size: var(--fs-l);
+  font-size: var(--fs-m);
   position: relative;
 }
 
@@ -114,4 +119,82 @@ nav ul li::before {
 
 nav ul li:hover::before {
   transform: scale(1);
+}
+
+/*? HERO SECTION CSS */
+.hero-section {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+.hero-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.texts {
+  flex-basis: 60%;
+}
+
+.texts h1 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-normal);
+  color: var(--second-color);
+  font-family: "Miniver", sans-serif;
+}
+
+.texts h2 {
+  font-size: var(--fs-xll);
+  max-width: 70%;
+  line-height: 1.5;
+  color: var(--white-color);
+  margin: 10px 0 20px;
+  font-weight: var(--fw-semibold);
+}
+
+.texts p {
+  font-size: var(--fs-m);
+  line-height: 1.5;
+  max-width: 70%;
+  color: var(--white-color);
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  background: var(--second-color);
+  padding: 10px 26px;
+  border-radius: 30px;
+  color: #7f2e2e;
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-m);
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.button:hover,
+.contact-us {
+  color: var(--second-color);
+  border-color: var(--white-color);
+  background: transparent;
+}
+
+.contact-us:hover {
+  color: var(--bg-color);
+  background: var(--second-color);
+  border-color: transparent;
+}
+
+.image {
+  flex-basis: 60%;
+}
+
+.image img {
+  width: 100%;
 }
