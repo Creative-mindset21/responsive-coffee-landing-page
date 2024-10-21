@@ -205,6 +205,14 @@ nav ul li:hover::before {
 }
 
 @media screen and (max-width: 900px) {
+  :root {
+    /*? FONT SIZE */
+    --fs-m: 1rem;
+    --fs-l: 1.3rem;
+    --fs-xl: 1.5rem;
+    --fs-xll: 1.8rem;
+  }
+  /* ! HEADER SECTION */
   nav ul {
     position: fixed;
     left: -300px;
@@ -261,5 +269,29 @@ nav ul li:hover::before {
     position: absolute;
     right: 30px;
     top: 70px;
+  }
+
+  /* ! HERO SECTION */
+  .image {
+    margin-right: 0;
+    max-width: 400px;
+  }
+
+  .hero-section .container {
+    flex-direction: column-reverse;
+    padding: 80px 20px 20px;
+    gap: 50px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .texts h1,
+  .texts h2,
+  .texts p {
+    max-width: 100%;
+  }
+
+  .buttons {
+    justify-content: center;
   }
 }
